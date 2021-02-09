@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}<!-- если содержимое title передается в шаблоне
+    его нужно отобразить-->
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Мой сайт!</title>
+    {% endif %}
+</head>
+<body>
+
+{% block content %}
+    <!-- Ваши странички будут генерироваться здесь -->
+{% endblock %}
+
+</body>
+</html>
