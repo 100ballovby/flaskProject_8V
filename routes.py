@@ -16,9 +16,10 @@ def main_page():
 
 @app.route('/about')
 def about_page():
-    return '<p>Страница О нас</p>'
+    """Рисую шаблон about.html и отображаю СВОЙ тег title"""
+    return render_template('about.html', title='Страница о нас')
 
 
 @app.route('/contact')
 def contact_page():
-    return '<p>Страница контакты</p>'
+    return render_template('contacts.html', title='Контакты')

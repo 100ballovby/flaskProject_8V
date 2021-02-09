@@ -11,6 +11,20 @@
 </head>
 <body>
 
+<ul class="menu">
+    <li><!-- элемент меню -->
+        <a href="{{ url_for('main_page') }}">Главная</a><!-- ссылка на страницу сайта -->
+    </li>
+    <li>
+        <a href="{{ url_for('about_page') }}">О нас</a>
+    </li>
+    <li>
+        <a href="{{ url_for('contact_page') }}">Контакты</a>
+    </li>
+</ul>
+
+<p>Demid Raxin's site</p>
+
 {% block content %}
     <!-- Ваши странички будут генерироваться здесь -->
 {% endblock %}
