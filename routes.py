@@ -23,3 +23,22 @@ def about_page():
 @app.route('/contact')
 def contact_page():
     return render_template('contacts.html', title='Контакты')
+
+
+@app.route('/news')
+def news_page():
+    posts = [
+        {
+            'author': {'username': 'Zodiac'},
+            'body': 'Hello there! Im Zodiac!'
+        },
+        {
+            'author': {'username': 'Architect'},
+            'body': 'Zodiac is dummy!'
+        },
+        {
+            'author': {'username': 'Susan'},
+            'body': 'They are stupid! Hello there!'
+        }
+    ]
+    return render_template('news.html', title='Новости', posts=posts)

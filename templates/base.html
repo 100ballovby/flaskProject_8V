@@ -8,6 +8,9 @@
     {% else %}
         <title>Мой сайт!</title>
     {% endif %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/main.css') }}">
+
 </head>
 <body>
 
@@ -20,6 +23,9 @@
     </li>
     <li>
         <a href="{{ url_for('contact_page') }}">Контакты</a>
+    </li>
+    <li>
+        <a href="{{ url_for('news_page') }}">Новости</a>
     </li>
 </ul>
 

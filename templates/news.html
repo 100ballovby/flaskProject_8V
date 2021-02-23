@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Hello! There is a news page!</h1>
+
+    {% for post in posts %} <!-- Все, что написано между меток, будет генерироваться -->
+        <div class="post">
+            <h3 class="post-title">{{ post.author.username }} says:</h3>
+            <p class="post-body">{{ post.body }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
